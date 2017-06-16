@@ -1,0 +1,229 @@
+.tooltip {
+  display: none;
+  position: absolute;
+  top: 20px;
+  color: $color-white;
+  background-color: $color-gray;
+  padding: 20px;
+  border-radius: 3px;
+  box-shadow: 0 3px 5px 0 rgba(0,0,0,0.05), 0 3px 5px 0 rgba(61,64,78,0.12);
+  z-index: 99;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+
+  &--error {
+      background-color: $color-red !important;
+      padding: 10px;
+      font-size: 13px;
+
+      &::after {
+          color: $color-red !important;
+          border-bottom-color: $color-red !important;
+      }
+  }
+
+  &_wrapper {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: solid 9px transparent;
+    border-bottom-color: $color-gray;
+  }
+
+  &__container {
+    display: block;
+    position: absolute;
+    background: $color-gray;
+
+    &--bottom {
+        left: 50%;
+        transform: translate(-50%, 50%);
+        top: 60%;
+
+        &::after {
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-bottom-color: $color-gray;
+            border-top-color: transparent;
+        }
+
+}
+        &--bottom-left {
+            left: 50%;
+            transform: translate(-90%, 50%);
+            top: 60%;
+
+            &::after {
+              bottom: 100%;
+              left: 90%;
+              transform: translateX(-50%);
+              border-bottom-color: $color-gray;
+              border-top-color: transparent;
+            }
+        }
+
+        &--bottom-right {
+            left: 50%;
+            transform: translate(-10%, 50%);
+            top: 60%;
+            &::after {
+              bottom: 100%;
+              left: 10%;
+              transform: translateX(-50%);
+              border-bottom-color: $color-gray;
+              border-top-color: transparent;
+            }
+        }
+
+
+    &--left {
+    transform: translate(-110%, -50%);
+    top: 50%;
+
+    &::after{
+        bottom: 50% !important;
+        left: 100%;
+        border-left-color: $color-gray;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        transform: translateY(50%);
+    }
+
+    }
+
+    &--right {
+      left: 115%;
+      transform: translateY(-50%);
+      top: 50%;
+
+      &::after{
+          bottom: 50% !important;
+          border-left-color: transparent;
+          border-right-color: $color-gray;
+          border-bottom-color: transparent;
+          transform: translate(-200%, 50%);
+      }
+    }
+
+    &--top {
+      left: 50%;
+      transform: translate(-50%, -110%);
+      top: -10%;
+      &::after {
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-bottom-color: transparent;
+        border-top-color: $color-gray;
+      }
+    }
+
+    &--top-left {
+        left: 50%;
+        transform: translate(-90%, -110%);
+        top: -10%;
+        &::after {
+          top: 100%;
+          left: 90%;
+          transform: translateX(-50%);
+          border-bottom-color: transparent;
+          border-top-color: $color-gray;
+        }
+    }
+
+    &--top-right {
+        left: 50%;
+        transform: translate(-10%, -110%);
+        top: -10%;
+        &::after {
+          top: 100%;
+          left: 10%;
+          transform: translateX(-50%);
+          border-bottom-color: transparent;
+          border-top-color: $color-gray;
+        }
+    }
+}
+
+  &--is-active {
+    display: block;
+    z-index: 99;
+  }
+
+  &--size-xsmall {
+    width: 100px;
+  }
+
+  &--size-small {
+    width: 180px;
+  }
+
+  &--size-medium {
+    width: 240px;
+  }
+
+  &--size-large {
+    width: 300px;
+  }
+
+  &__close {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 4px;
+    padding-top: 5px;
+    text-align: center;
+    right: 4px;
+    cursor: pointer;
+    color: $color-card-background;
+
+    &:hover{
+        border-radius: 30px;
+        background-color: $color-gray-blue-light !important;
+    }
+  }
+
+}
+
+.wrap {
+    position: relative;
+}
+
+/**
+ * Graph tooltips CSS
+ */
+.highcharts-tooltip span {
+    font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif !important;
+    // font-size: 14px !important;
+}
+
+.highcharts-tooltip > span {
+    background: #3D3F4E;
+    border-radius: 5px;
+    padding: 15px;
+    color: white !important;
+}
+
+.highcharts-tooltip > span > span:first-child {
+    font-size: 12px !important;
+    margin-bottom: 10px;
+    display: inline-block;
+    color: #cecfd2;
+}
+
+.highcharts-legend-item {
+    font-weight: 400 !important;
+    font-size: 15px !important;
+    color: $color-gray-medium;
+}
