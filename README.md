@@ -7,6 +7,8 @@ A simple react component to add tooltip to the target element.
 Include the file tooltip.js in your current working file, by `import` or `require`.
 
 ```javascript
+import Tooltip from 'react-tooltip'
+
 <Tooltip
       size={'small'}
       cross={true}
