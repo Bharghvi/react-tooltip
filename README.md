@@ -23,15 +23,15 @@ Here, `target` should be a markup/element over which we expect to have our toolt
 
 ## Props
 
-Prop Name | Usage
------------- | -------------
-size | specify size `xsmall`, `small`, `medium` and `large`
-cross | when you desire closing the tooltip via close(cross) button 
-target | markup over which we desire to have tooltip
-place | location of tooltip viz. `top`, `bottom`, `right` and `left`
-content | data to be displayed in tooltip (it can be markup/elements too) 
-eventOn | event on which tooltip should appear; these are basic js events viz `click`, `mouseover`, etc.
-contentClass | class of tooltip content for styling purpose (if required)
+Prop Name | Type | Usage
+------------ | ------------- | -------------
+size | string | specify size `xsmall`, `small`, `medium` and `large`
+cross | boolean | when you desire closing the tooltip via close(cross) button 
+target | html markup | markup over which we desire to have tooltip
+place | string | location of tooltip viz. `top`, `bottom`, `right` and `left`
+content | | data to be displayed in tooltip (it can be markup/elements too) 
+eventOn | string | event on which tooltip should appear; these are basic js events viz `click`, `mouseover`, etc.
+contentClass | string | class of tooltip content for styling purpose (if required)
 
 ## Example
 
