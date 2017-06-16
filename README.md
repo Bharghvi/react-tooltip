@@ -31,5 +31,8 @@ content | data to be displayed in tooltip (it can be markup/elements too)
 eventOn | event on which tooltip should appear; these are basic js events viz `click`, `mouseover`, etc.
 contentClass | class of tooltip content for styling purpose (if required)
 
+## Example
+
+![Image of demo](123.gif)
 
    
